@@ -7,14 +7,14 @@ Trepid Ink is inspired and cloned from the original [Trepid](https://github.com/
 - Themes
   - Trepid Bright
     - Updating: New render engine
-    - Renaming: Trepid Bright => Trepid
+    - Renaming: Trepid Bright => Trepid Ink
   - Trepid
     - Updating: New render engine
-    - Renaming: Trepid => Trepid Soft
-  - Trepid Bright
+    - Renaming: Trepid => Trepid Ink Soft
+  - Trepid Ink Bright
     - Adding light edition for the light coders 
-  - Trepid Light
-    - Adding a softer color palette version of the Trepid Bright
+  - Trepid Ink Light
+    - Adding a softer color palette version of the Trepid Ink Bright
 - Funtions
   - Comments
     - TODO highlights
