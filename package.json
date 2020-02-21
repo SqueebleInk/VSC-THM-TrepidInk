@@ -15,6 +15,11 @@
                 "label": "Trepid Ink",
                 "uiTheme": "vs-dark",
                 "path": "./themes/Trepid-color-theme.json"
+            },
+            {
+                "label": "Trepid Ink Soft",
+                "uiTheme": "vs-dark",
+                "path": "./themes/TrepidInkSoft-color-theme.json"
             }
         ]
     }
