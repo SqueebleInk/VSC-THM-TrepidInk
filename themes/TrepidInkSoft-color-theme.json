@@ -270,11 +270,11 @@
 		}
 	],
 	"colors": {
-		"editor.background": "#252526",
+		"editor.background": "#212124",
 		"editorCursor.foreground": "#D0D0D0",
 		"editor.foreground": "#C0C0C0",
-		"editorWhitespace.foreground": "#3B3A32",
-		"editor.lineHighlightBackground": "#1d1d1f",
+		"editorWhitespace.foreground": "#4e4e4e",
+		"editor.lineHighlightBackground": "#1b1b1b",
 		"editor.selectionBackground": "#253550"
 	},
 	"name": "Trepid Ink Soft"
