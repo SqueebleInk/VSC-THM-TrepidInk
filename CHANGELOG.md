@@ -3,15 +3,17 @@
 ## [v0.0.3] - ??/02/2020
 
   - [Added]
-    - Visual update every version with a new N number vN.N.0
-    - Editor line number styling  
-      `Trepid Ink` && `Trepid Ink Soft`
+    - Visual updates every version with a new N number vN.N.0
+    - `Trepid Ink` && `Trepid Ink Soft` 
+      - Editor unnecessary code opacity  
+        Better visability to show you unnecessary code
+        - Color: VS Code Default => #00000050
+      - Editor line number styling 
         - Color: #707070  
-    - Active line number [vscode issue 84772](https://github.com/microsoft/vscode/issues/84772)  
-      Add `"editor.renderLineHighlight": "all"` or `"editor.renderLineHighlight": "gutter"`  
-      To make the active line number working in your editor  
-      `Trepid Ink` && `Trepid Ink Soft`
-        - Color: #C0C0C0  
+      - Active line number [vscode issue 84772](https://github.com/microsoft/vscode/issues/84772)  
+        Add `"editor.renderLineHighlight": "all"` or `"editor.renderLineHighlight": "gutter"`  
+        To make the active line number working in your editor  
+          - Color: #C0C0C0  
   - [Updated]
     - `Trepid Ink`
       - Class name color: `#A6E22E` => `#A6E725`

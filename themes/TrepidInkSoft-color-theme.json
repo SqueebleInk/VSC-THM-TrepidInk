@@ -277,7 +277,8 @@
 		"editor.lineHighlightBackground": "#1b1b1b",
 		"editor.selectionBackground": "#253550",
 		"editorLineNumber.activeForeground": "#C0C0C0",
-		"editorLineNumber.foreground": "#707070"
+		"editorLineNumber.foreground": "#707070",
+		"editorUnnecessaryCode.opacity": "#00000050"
 	},
 	"name": "Trepid Ink Soft"
 }
