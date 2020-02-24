@@ -1,6 +1,6 @@
 # Change Log
 
-## [v0.0.3] - ??/02/2020
+## [v0.0.3] - 24/02/2020
 
   - [Added]
     - Visual updates every version with a new N number vN.N.0
