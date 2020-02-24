@@ -3,6 +3,7 @@
     "displayName": "Trepid Ink",
     "description": "A set of color themes, designed to mix well with vscode its interface. Inspired by Trepid",
     "version": "0.0.1",
+	"publisher": "Squeeble",
     "engines": {
         "vscode": "^1.42.0"
     },
