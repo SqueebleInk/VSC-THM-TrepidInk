@@ -11,11 +11,13 @@ A set of color themes for [Visual Studio Code](https://code.visualstudio.com/) d
 
 
 ## Roadmap / Updates vs [Trepid](https://github.com/EnKrypt/Trepid)
+[vN.N.N] when fist added in a version
+
 - Themes
-  - [[v0.0.1]](https://github.com/SqueebleInk/VSC-THM-TrepidInk/blob/master/CHANGELOG.md#v001---21022020) Trepid Ink
+  - [[v0.0.1]](https://github.com/SqueebleInk/VSC-THM-TrepidInk/blob/master/CHANGELOG.md#v001---21022020---initial-release) Trepid Ink
     - Updating: New render engine
     - Renaming: Trepid Bright => Trepid Ink
-  - [[v0.0.1]](https://github.com/SqueebleInk/VSC-THM-TrepidInk/blob/master/CHANGELOG.md#v001---21022020) Trepid Ink Soft
+  - [[v0.0.1]](https://github.com/SqueebleInk/VSC-THM-TrepidInk/blob/master/CHANGELOG.md#v001---21022020---initial-release) Trepid Ink Soft
     - Updating: New render engine
     - Renaming: Trepid => Trepid Ink Soft
   - Trepid Ink Bright
