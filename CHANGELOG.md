@@ -1,20 +1,25 @@
 # Change Log
 
-## [v0.0.1] - 21/02/2020
-
-### Initial release
-  - [Fixed]
-    - Rename base name `Trepid` => `Trepid Ink`.  
-    Because old users of Trepid would have a double `Trepid` theme name.
-  - [Updated]
-    - Colors for `Trepid Ink`  
-    ![Trepid Bright](./images/TrepidBright.png) ![Trepid Ink](./images/TrepidInk.png)  
-    - Colors for `Trepid Ink Soft`  
-    ![Trepid](./images/Trepid.png) ![Trepid Ink Soft](./images/TrepidInkSoft.png)
+## [v0.0.3] - ??/02/2020
 
   - [Added]
-    - `Trepid Ink` from the old `Trepid Bright`
-    - `Trepid Ink Soft` from the old `Trepid`
+    - Visual update every version with a new N number vN.N.0
+    - Editor line number styling  
+      `Trepid Ink` && `Trepid Ink Soft`
+        - Color: #707070  
+    - Active line number [vscode issue 84772](https://github.com/microsoft/vscode/issues/84772)  
+      Add `"editor.renderLineHighlight": "all"` or `"editor.renderLineHighlight": "gutter"`  
+      To make the active line number working in your editor  
+      `Trepid Ink` && `Trepid Ink Soft`
+        - Color: #C0C0C0  
+  - [Updated]
+    - `Trepid Ink`
+      - Class name color: `#A6E22E` => `#A6E725`
+      - Inherited class: `#A6E22E` => `#7FB11B`
+      - Line Highlight Background: `#000000` => `#030303`
+    - `Trepid Ink Soft`:
+      - Class name color: `#8ABC26` => `#97D618`
+      - Inherited class: `#8ABC26` => `#75A516`
 
 ## [v0.0.2] - 24/02/2020
 
@@ -28,3 +33,18 @@
       - Darker select line because of the darker background
       - Creating a nice balance for an awesome workflow
       - Makes the soft a little more pop
+
+## [v0.0.1] - 21/02/2020 - Initial release
+
+  - [Fixed]
+    - Rename base name `Trepid` => `Trepid Ink`.  
+    Because old users of Trepid would have a double `Trepid` theme name.
+  - [Updated]
+    - Colors for `Trepid Ink`  
+    ![Trepid Bright](./images/TrepidBright.png) ![Trepid Ink](./images/TrepidInk.png)  
+    - Colors for `Trepid Ink Soft`  
+    ![Trepid](./images/Trepid.png) ![Trepid Ink Soft](./images/TrepidInkSoft.png)
+
+  - [Added]
+    - `Trepid Ink` from the old `Trepid Bright`
+    - `Trepid Ink Soft` from the old `Trepid`

@@ -19,7 +19,7 @@
 			"name": "Comment",
 			"scope": "comment",
 			"settings": {
-				"foreground": "#5d5d5dff"
+				"foreground": "#696969"
 			}
 		},
 		{
@@ -90,7 +90,7 @@
 			"scope": "entity.name.class",
 			"settings": {
 				"fontStyle": "underline",
-				"foreground": "#8abc26ff"
+				"foreground": "#97D618"
 			}
 		},
 		{
@@ -98,7 +98,7 @@
 			"scope": "entity.other.inherited-class",
 			"settings": {
 				"fontStyle": "italic underline",
-				"foreground": "#8abc26ff"
+				"foreground": "#75A516"
 			}
 		},
 		{
@@ -275,7 +275,9 @@
 		"editor.foreground": "#C0C0C0",
 		"editorWhitespace.foreground": "#4e4e4e",
 		"editor.lineHighlightBackground": "#1b1b1b",
-		"editor.selectionBackground": "#253550"
+		"editor.selectionBackground": "#253550",
+		"editorLineNumber.activeForeground": "#C0C0C0",
+		"editorLineNumber.foreground": "#707070"
 	},
 	"name": "Trepid Ink Soft"
 }

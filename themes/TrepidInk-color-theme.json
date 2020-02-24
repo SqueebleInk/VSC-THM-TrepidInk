@@ -90,7 +90,7 @@
 			"scope": "entity.name.class",
 			"settings": {
 				"fontStyle": "underline",
-				"foreground": "#A6E22E"
+				"foreground": "#A6E725"
 			}
 		},
 		{
@@ -98,7 +98,7 @@
 			"scope": "entity.other.inherited-class",
 			"settings": {
 				"fontStyle": "italic underline",
-				"foreground": "#A6E22E"
+				"foreground": "#7FB11B"
 			}
 		},
 		{
@@ -274,8 +274,10 @@
 		"editorCursor.foreground": "#D0D0D0",
 		"editor.foreground": "#C0C0C0",
 		"editorWhitespace.foreground": "#444444",
-		"editor.lineHighlightBackground": "#000000",
-		"editor.selectionBackground": "#253550"
+		"editor.lineHighlightBackground": "#030303",
+		"editor.selectionBackground": "#253550",
+		"editorLineNumber.activeForeground": "#C0C0C0",
+		"editorLineNumber.foreground": "#707070"
 	},
 	"name": "Trepid Ink"
 }
