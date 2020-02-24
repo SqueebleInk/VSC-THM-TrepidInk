@@ -13,7 +13,7 @@
       - Active line number [vscode issue 84772](https://github.com/microsoft/vscode/issues/84772)  
         Add `"editor.renderLineHighlight": "all"` or `"editor.renderLineHighlight": "gutter"`  
         To make the active line number working in your editor  
-          - Color: #C0C0C0  
+        - Color: #C0C0C0  
   - [Updated]
     - `Trepid Ink`
       - Class name color: `#A6E22E` => `#A6E725`
