@@ -22,5 +22,9 @@
                 "path": "./themes/TrepidInkSoft-color-theme.json"
             }
         ]
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/SqueebleInk/VSC-THM-TrepidInk.git"
     }
 }
