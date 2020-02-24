@@ -1,14 +1,21 @@
 # VSC-THM-TrepidInk
 
 A set of color themes for [Visual Studio Code](https://code.visualstudio.com/) designed to mix well with its interface.  
-Trepid Ink is inspired and cloned from the original [Trepid](https://github.com/EnKrypt/Trepid) build by [EnKrypt](https://github.com/EnKrypt/)
+`Trepid Ink` is inspired and cloned from the original [`Trepid`](https://github.com/EnKrypt/Trepid) build by [EnKrypt](https://github.com/EnKrypt/)
+
+## Trepid Ink
+![Trepid Ink](./images/TrepidInk.png)
+
+## Trepid Ink Soft
+![Trepid Ink](./images/TrepidInkSoft.png)
+
 
 ## Roadmap / Updates vs [Trepid](https://github.com/EnKrypt/Trepid)
 - Themes
-  - Trepid Bright
+  - [v0.0.1] Trepid Ink
     - Updating: New render engine
     - Renaming: Trepid Bright => Trepid Ink
-  - Trepid
+  - [v0.0.1] Trepid Ink Soft
     - Updating: New render engine
     - Renaming: Trepid => Trepid Ink Soft
   - Trepid Ink Bright
