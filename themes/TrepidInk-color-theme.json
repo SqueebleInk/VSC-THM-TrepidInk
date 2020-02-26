@@ -80,14 +80,6 @@
 			}
 		},
 		{
-			"name": "Storage type",
-			"scope": "storage.type",
-			"settings": {
-				"fontStyle": "italic",
-				"foreground": "#60E0E0"
-			}
-		},
-		{
 			"name": "Class name",
 			"scope": "entity.other.attribute-name",
 			"settings": {
@@ -156,13 +148,22 @@
 		{
 			"name": "Library class/type",
 			"scope": [
-				"support.class",
-				"storage.type",
-				"support.type",
 			],
 			"settings": {
 				"fontStyle": "italic",
 				"foreground": "#60E0E0"
+			}
+		},
+		{
+			"scope": [
+				"support.class",
+				"storage.type",
+				"support.type",
+				"support.function"
+			],
+			"settings": {
+				"foreground": "#007ACC",
+				"fontStyle": ""
 			}
 		},
 		{
@@ -285,7 +286,8 @@
 		"editor.selectionBackground": "#253550",
 		"editorLineNumber.activeForeground": "#C0C0C0",
 		"editorLineNumber.foreground": "#707070",
-		"editorUnnecessaryCode.opacity": "#00000070"
+		"editorUnnecessaryCode.opacity": "#00000070",
+		"tab.activeBorder": "#007ACC"
 	},
 	"name": "Trepid Ink"
 }
