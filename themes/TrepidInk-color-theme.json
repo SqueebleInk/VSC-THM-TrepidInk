@@ -33,11 +33,17 @@
 			"name": "Built-in constant",
 			"scope": [
 				"constant.language",
-				"constant.numeric"
 			],
 			"settings": {
 				"foreground": "#a770f0",
 				"fontStyle": " bold italic"
+			}
+		},
+		{
+			"scope": [ "constant.numeric" ],
+			"settings": {
+				"foreground": "#a770f0",
+				"fontStyle": "bold"
 			}
 		},
 		{
