@@ -30,17 +30,13 @@
 			}
 		},
 		{
-			"name": "Number",
-			"scope": "constant.numeric",
-			"settings": {
-				"foreground": "#D070F0"
-			}
-		},
-		{
 			"name": "Built-in constant",
-			"scope": "constant.language",
+			"scope": [
+				"constant.language",
+				"constant.numeric"
+			],
 			"settings": {
-				"foreground": "#8080F0",
+				"foreground": "#a770f0",
 				"fontStyle": " bold italic"
 			}
 		},
@@ -59,7 +55,7 @@
 			"scope": "variable",
 			"settings": {
 				"fontStyle": " italic",
-				"foreground": "#F060B0"
+				"foreground": "#fc69bf"
 			}
 		},
 		{
@@ -73,8 +69,8 @@
 			"name": "Storage",
 			"scope": "storage",
 			"settings": {
-				"fontStyle": "",
-				"foreground": "#F92672"
+				"fontStyle": "bold",
+				"foreground": "#e02d2d"
 			}
 		},
 		{
@@ -87,7 +83,7 @@
 		},
 		{
 			"name": "Class name",
-			"scope": "entity.name.class",
+			"scope": "entity.other.attribute-name",
 			"settings": {
 				"fontStyle": "underline",
 				"foreground": "#A6E725"
@@ -98,7 +94,7 @@
 			"scope": "entity.other.inherited-class",
 			"settings": {
 				"fontStyle": "italic underline",
-				"foreground": "#7FB11B"
+				"foreground": "#A6E725"
 			}
 		},
 		{
@@ -106,15 +102,17 @@
 			"scope": "entity.name.function",
 			"settings": {
 				"fontStyle": "",
-				"foreground": "#60F0A0"
+				"foreground": "#46f394"
 			}
 		},
 		{
 			"name": "Function argument",
-			"scope": "variable.parameter",
+			"scope": [
+				"variable.parameter",
+			],
 			"settings": {
 				"fontStyle": "italic",
-				"foreground": "#fc9755"
+				"foreground": "#ff7316"
 			}
 		},
 		{
@@ -152,17 +150,20 @@
 		{
 			"name": "Library class/type",
 			"scope": [
+				"support.class",
+				"storage.type",
 				"support.type",
-				"support.class"
 			],
 			"settings": {
 				"fontStyle": "italic",
-				"foreground": "#F08080"
+				"foreground": "#60E0E0"
 			}
 		},
 		{
 			"name": "Library variable",
-			"scope": "support.other.variable",
+			"scope": [
+				"support.other.variable",
+			],
 			"settings": {
 				"fontStyle": " italic",
 				"foreground": "#F060B0"
@@ -187,7 +188,7 @@
 			"name": "JSON String",
 			"scope": "meta.structure.dictionary.json string.quoted.double.json",
 			"settings": {
-				"foreground": "#CFCFC2"
+				"foreground": "#e2e251"
 			}
 		},
 		{
@@ -278,7 +279,7 @@
 		"editor.selectionBackground": "#253550",
 		"editorLineNumber.activeForeground": "#C0C0C0",
 		"editorLineNumber.foreground": "#707070",
-		"editorUnnecessaryCode.opacity": "#00000050"
+		"editorUnnecessaryCode.opacity": "#00000070"
 	},
 	"name": "Trepid Ink"
 }
