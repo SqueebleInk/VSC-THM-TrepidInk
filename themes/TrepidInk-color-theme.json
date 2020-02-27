@@ -26,7 +26,8 @@
 			"name": "String",
 			"scope": "string",
 			"settings": {
-				"foreground": "#60D060"
+				"foreground": "#31a357",
+				"fontStyle": "bold"
 			}
 		},
 		{
@@ -75,8 +76,8 @@
 			"name": "Storage",
 			"scope": "storage",
 			"settings": {
-				"fontStyle": "bold",
-				"foreground": "#e02d2d"
+				"fontStyle": "italic ",
+				"foreground": "#ff3333"
 			}
 		},
 		{
@@ -97,7 +98,10 @@
 		},
 		{
 			"name": "Function name",
-			"scope": "entity.name.function",
+			"scope": [
+				"entity.name.function",
+				"support.function"
+			],
 			"settings": {
 				"fontStyle": "",
 				"foreground": "#46f394"
@@ -110,12 +114,14 @@
 			],
 			"settings": {
 				"fontStyle": "italic",
-				"foreground": "#ff7316"
+				"foreground": "#ff893a"
 			}
 		},
 		{
 			"name": "Tag name",
-			"scope": "entity.name.tag",
+			"scope": [ 
+				"entity.name.tag",
+			],
 			"settings": {
 				"fontStyle": "",
 				"foreground": "#F92672"
@@ -131,38 +137,39 @@
 		},
 		{
 			"name": "Library function",
-			"scope": "support.function",
+			"scope": [ "support.function", ],
 			"settings": {
-				"fontStyle": "",
-				"foreground": "#64ffaa"
+				"fontStyle": "bold",
+				"foreground": "#6bf7f7"
 			}
 		},
 		{
 			"name": "Library constant",
-			"scope": "support.constant",
+			"scope": [
+				"support.constant",
+				"support.class",
+			],
 			"settings": {
-				"fontStyle": "",
+				"fontStyle": "bold",
 				"foreground": "#a9fd64"
 			}
 		},
 		{
 			"name": "Library class/type",
 			"scope": [
+				"storage.type",
 			],
 			"settings": {
 				"fontStyle": "italic",
-				"foreground": "#60E0E0"
+				"foreground": "#6bf7f7"
 			}
 		},
 		{
 			"scope": [
-				"support.class",
-				"storage.type",
 				"support.type",
-				"support.function"
 			],
 			"settings": {
-				"foreground": "#007ACC",
+				"foreground": "#00b7ff",
 				"fontStyle": ""
 			}
 		},
@@ -173,7 +180,7 @@
 			],
 			"settings": {
 				"fontStyle": " italic",
-				"foreground": "#F060B0"
+				"foreground": "#ff59b4"
 			}
 		},
 		{
@@ -193,9 +200,9 @@
 		},
 		{
 			"name": "JSON String",
-			"scope": "meta.structure.dictionary.json string.quoted.double.json",
+			"scope": "string.quoted.double.json",
 			"settings": {
-				"foreground": "#e2e251"
+				"foreground": "#e0e095"
 			}
 		},
 		{
@@ -279,15 +286,18 @@
 	],
 	"colors": {
 		"editor.background": "#1c1c1d",
-		"editorCursor.foreground": "#D0D0D0",
 		"editor.foreground": "#C0C0C0",
-		"editorWhitespace.foreground": "#444444",
 		"editor.lineHighlightBackground": "#030303",
 		"editor.selectionBackground": "#253550",
+		"editor.foldBackground": "#44444444",
+
+		"editorCursor.foreground": "#D0D0D0",
 		"editorLineNumber.activeForeground": "#C0C0C0",
 		"editorLineNumber.foreground": "#707070",
+		"editorWhitespace.foreground": "#444444",
 		"editorUnnecessaryCode.opacity": "#00000070",
-		"tab.activeBorder": "#007ACC"
+
+		"tab.activeBorder": "#007ACC",
 	},
 	"name": "Trepid Ink"
 }
