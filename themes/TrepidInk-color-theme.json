@@ -26,7 +26,7 @@
 			"name": "String",
 			"scope": "string",
 			"settings": {
-				"foreground": "#31a357",
+				"foreground": "#01b33c",
 				"fontStyle": "bold"
 			}
 		},
@@ -69,7 +69,7 @@
 			"name": "Keyword",
 			"scope": "keyword",
 			"settings": {
-				"foreground": "#E0E060"
+				"foreground": "#ffff71"
 			}
 		},
 		{
@@ -206,6 +206,7 @@
 				"fontStyle": " italic",
 			}
 		},
+		// #region Diff
 		{
 			"name": "diff.header",
 			"scope": [
@@ -237,6 +238,9 @@
 				"foreground": "#E6DB74"
 			}
 		},
+		// #endregion
+
+		// #region GitGutter
 		{
 			"name": "GitGutter deleted",
 			"scope": "markup.deleted.git_gutter",
@@ -272,6 +276,7 @@
 				"foreground": "#75715E"
 			}
 		},
+		// #endregion
 		{
 			"scope": "constant.numeric.line-number.find-in-files - match",
 			"settings": {
