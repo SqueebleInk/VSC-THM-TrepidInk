@@ -202,7 +202,8 @@
 			"name": "JSON String",
 			"scope": "string.quoted.double.json",
 			"settings": {
-				"foreground": "#e0e095"
+				"foreground": "#e49865",
+				"fontStyle": " italic",
 			}
 		},
 		{
