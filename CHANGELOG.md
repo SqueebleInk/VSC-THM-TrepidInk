@@ -1,5 +1,24 @@
 # Change Log
 
+## [v0.1.0] - 29/02/2020
+
+  - [Removed]
+    - `Trepid Ink Soft` Because small to no differences  
+      Will may be added back in a later version
+  
+  - [Added]
+    - Trepid Ink logo  
+      ![Trepid Ink Logo](./images/logo.png)  
+
+  - [Updated]
+    - Trepid Ink colors  
+      [v0.0.3]  
+      ![Trepid Ink](./images/TrepidInk003.png)  
+      ![Trepid Ink](./images/TrepidInk003j.png)  
+      [v0.1.0]  
+      ![Trepid Ink](./images/TrepidInk010.png)  
+      ![Trepid Ink](./images/TrepidInk010j.png)  
+
 ## [v0.0.3] - 24/02/2020
 
   - [Added]
@@ -7,11 +26,12 @@
     - `Trepid Ink` && `Trepid Ink Soft` 
       - Editor unnecessary code opacity  
         Better visability to show you unnecessary code
-        - Color: VS Code Default => #00000050
+        - Color: VS Code Default => `#00000050`
       - Editor line number styling 
-        - Color: #707070  
+        - Color: `#707070`
       - Active line number [vscode issue 84772](https://github.com/microsoft/vscode/issues/84772)  
-        Add `"editor.renderLineHighlight": "all"` or `"editor.renderLineHighlight": "gutter"`  
+        Add `"editor.renderLineHighlight": "all"` or  
+        `"editor.renderLineHighlight": "gutter"`  
         To make the active line number working in your editor  
         - Color: #C0C0C0  
   - [Updated]
@@ -27,10 +47,16 @@
 
   - [Updated]
     - Colors for `Trepid Ink`  
-    ![Trepid Ink](./images/TrepidInk001.png) ![Trepid Ink](./images/TrepidInk002.png) 
+    [v0.0.1]
+    ![Trepid Ink](./images/TrepidInk001.png)  
+    [v0.0.2]
+    ![Trepid Ink](./images/TrepidInk002.png) 
     - Colors for `Trepid Ink Soft`  
-    ![Trepid Ink Soft](./images/TrepidInkSoft001.png) ![Trepid Ink Soft](./images/TrepidInkSoft002.png)  
-    - Why an other color update?
+    [v0.0.1]
+    ![Trepid Ink Soft](./images/TrepidInkSoft001.png)  
+    [v0.0.2]
+    ![Trepid Ink Soft](./images/TrepidInkSoft002.png)  
+    - Why a color update?
       - Darker background to make more clear in the tabs what you have open
       - Darker select line because of the darker background
       - Creating a nice balance for an awesome workflow

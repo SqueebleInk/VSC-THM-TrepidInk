@@ -2,7 +2,7 @@
     "name": "trepid-ink",
     "displayName": "Trepid Ink",
     "description": "A set of color themes, designed to mix well with vscode its interface. Inspired by Trepid",
-    "version": "0.0.3",
+    "version": "0.1.0",
 	"publisher": "Squeeble",
     "engines": {
         "vscode": "^1.42.0"
@@ -16,16 +16,15 @@
                 "label": "Trepid Ink",
                 "uiTheme": "vs-dark",
                 "path": "./themes/TrepidInk-color-theme.json"
-            },
-            {
-                "label": "Trepid Ink Soft",
-                "uiTheme": "vs-dark",
-                "path": "./themes/TrepidInkSoft-color-theme.json"
             }
         ]
     },
     "repository": {
         "type": "git",
         "url": "https://github.com/SqueebleInk/VSC-THM-TrepidInk.git"
-    }
+    },
+    "bugs": {
+      "url": "https://github.com/SqueebleInk/VSC-THM-TrepidInk/issues"
+    },
+    "icon": "images/logo.png"
 }
