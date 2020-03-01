@@ -1,11 +1,24 @@
 #  Trepid Ink
 
-A color theme for [Visual Studio Code](https://code.visualstudio.com/) designed to mix well with its interface.  
-`Trepid Ink` is inspired and cloned from the original [`Trepid`](https://github.com/EnKrypt/Trepid) build by [EnKrypt](https://github.com/EnKrypt/)
+A color theme for [Visual Studio Code](https://code.visualstudio.com/) designed to mix well with its interface. Integrated with a comment higlight extension for todo's and fix me's. The theme `Trepid Ink` is inspired and cloned from the original [`Trepid`](https://github.com/EnKrypt/Trepid) build by [EnKrypt](https://github.com/EnKrypt/)
 
 ## Trepid Ink  
 ![Trepid Ink](./images/TrepidInk010.png)  
 ![Trepid Ink](./images/TrepidInk010j.png)  
+
+## Features
+
+### TODO Highlighting: 
+*[TODO comment image]*
+
+### FixMe Highlighting:
+*[FixMe comment image]*
+
+### Custom comment highlights:
+This extension contributes the following settings:
+
+* `trepid-ink.enable-highlight-comments`: enable/disable this extension
+* `trepid-ink.thing`: set to `blah` to do something
 
 ## Roadmap / Updates vs [Trepid](https://github.com/EnKrypt/Trepid)
 [vN.N.N] when fist added in a version or removed
