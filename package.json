@@ -10,7 +10,16 @@
     },
     "categories": [
         "Themes",
-        "Other"
+        "Formatters"
+    ],
+    "keywords": [
+        "comment",
+        "comments",
+        "theme",
+        "highlight",
+        "highlighter",
+        "comment higlighter",
+        "comments higlighter"
     ],
     "contributes": {
         "themes": [
@@ -19,7 +28,31 @@
                 "uiTheme": "vs-dark",
                 "path": "./themes/TrepidInk-color-theme.json"
             }
-        ]
+        ],
+        "configuration": {
+            "title": "Trepid Ink",
+            "properties": {
+                "trepid-ink.comments": {
+                    "description": "`All` / `Block` / `Single` / `No` comment highlights",
+                    "default": "All",
+                    "type": "string"
+                },
+                "trepid-ink.tags": {
+                    "description": "Create extra tags to hilight other information or in an other color",
+                    "default": [
+                        {
+                            "color": "#ff893a",
+                            "tag": "todo"
+                        },
+                        {
+                            "color": "#ff3333",
+                            "tag": "fixme"
+                        }
+                    ],
+                    "type": "array"
+                }
+            }
+        }
     },
     "repository": {
         "type": "git",
@@ -28,6 +61,11 @@
     "bugs": {
         "url": "https://github.com/SqueebleInk/VSC-THM-TrepidInk/issues"
     },
+    "activationEvents": [
+        "onLanguage:javascript",
+        "onLanguage:typescript"
+    ],
+    "main": "out/extension.js",
     "icon": "images/logo.png",
     "scripts": {
         "vscode:prepublish": "npm run compile",
