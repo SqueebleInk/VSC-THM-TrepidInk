@@ -21,8 +21,6 @@ const GetConfig = (): TrepidInkConfig =>
 {
   const config: vscode.WorkspaceConfiguration = vscode.workspace.getConfiguration('trepid-ink');
 
-  console.log(config);
-
   return {
     enabled: config.get('comments') as CommentType,
     tags: config.get('tags') as TagConfig[],

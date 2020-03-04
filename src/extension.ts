@@ -39,7 +39,7 @@ const TriggerUpdateDecorations = () =>
 		clearTimeout(timeOut);
 	}
 
-	timeOut = setTimeout(UpdateDecorations, 300);
+	timeOut = setTimeout(UpdateDecorations, 100);
 };
 
 const UpdateDecorations = () =>

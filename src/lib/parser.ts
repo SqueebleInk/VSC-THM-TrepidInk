@@ -166,6 +166,9 @@ export class Parser {
 
   public ApplyStyle (activeEditor: vscode.TextEditor)
   {
-    // TODO Add in styling
+    this._tags.forEach(tag => {
+      activeEditor.setDecorations(tag.style, tag.ranges);
+      tag.ranges = [];
+    });
   }
 }

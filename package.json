@@ -33,7 +33,7 @@
             "title": "Trepid Ink",
             "properties": {
                 "trepid-ink.comments": {
-                    "description": "`All` / `Block` / `Single` / `No` comment highlights",
+                    "description": "All / Block / Single / No comment highlights",
                     "default": "All",
                     "type": "string"
                 },
