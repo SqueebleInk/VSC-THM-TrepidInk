@@ -76,7 +76,7 @@
         "onLanguage:typescript"
     ],
     "main": "out/extension.js",
-    "icon": "images/logo.png",
+    "icon": "assets/logo.png",
     "scripts": {
         "vscode:prepublish": "npm run compile",
         "compile": "tsc -p ./",
