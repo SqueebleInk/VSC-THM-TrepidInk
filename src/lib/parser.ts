@@ -1,12 +1,6 @@
 import * as vscode from 'vscode';
-import { CommentType, GetConfig } from './config';
-
-type TagData = {
-  tag: string,
-  endTag: string,
-  style: vscode.TextEditorDecorationType;
-  ranges: vscode.DecorationOptions[];
-};
+import { CommentType, GetConfig, TagData, CommentDefinition } from './config';
+import { languages } from './languages';
 
 export class Parser {
   private _tags: TagData[] = [];
@@ -16,7 +10,7 @@ export class Parser {
   private _blockCommentStart: string = '';
   private _blockCommentEnd: string = '';
 
-  private _commentType: CommentType = CommentType.AllLine;
+  private _commentType: CommentType = CommentType.AllLines;
 
   private _supportedLanguage: boolean = false;
 
@@ -29,44 +23,62 @@ export class Parser {
     this._commentType = GetConfig().enabled as CommentType;
 
     GetConfig().tags.forEach(item => {
-      let styling = { color: item.color };
-
       this._tags.push({
         endTag: item.tag.replace(/([()[{*+.$^\\|?])/g, '\\$1'),
         ranges: [],
-        style: vscode.window.createTextEditorDecorationType(styling),
+        style: vscode.window.createTextEditorDecorationType(item.style),
         tag: item.tag,
       });
     });
   }
 
-  private _SetChips (languageId: string)
+  private _SetBreaks (languageId: string)
   {
-    this._supportedLanguage = true;
+    this._supportedLanguage = false;
 
-    switch (languageId) {
-      case 'javascript':
-      case 'typescript': {
-        this._SetCommentChips('/*', '*/', '//');
+    languages.forEach(comment => {
+      if (typeof comment.languageId === 'string') {
+        if (comment.languageId === languageId) {
+          this._supportedLanguage = true;
+        }
+      } else {
+        comment.languageId.forEach(language => {
+          if (language === languageId) {
+            this._supportedLanguage = true;
+          }
+        });
       }
-      default: {
-        this._supportedLanguage = false;
-      } break;
-    }
+
+      if (this._supportedLanguage) {
+        this._SetCommentBreaks(comment);
+        return;
+      }
+    });
   }
 
-  private _SetCommentChips (start: string, end: string, single: string = '')
+  private _SetCommentBreaks (commentData: CommentDefinition)
   {
-    if (single !== '') {
+    const single = commentData.singleLineComment;
+    const start = commentData.blockCommentStart;
+    const end = commentData.blockCommentEnd;
+
+    if ((
+      commentData.commentType === CommentType.AllLines ||
+      commentData.commentType === CommentType.SingleLine
+    ) && (
+      this._commentType === CommentType.AllLines ||
+      this._commentType === CommentType.SingleLine
+    )) {
       this._singleLineComment = single;
-    } else {
-      this._commentType = CommentType.MultiLine;
     }
 
-    if (
-      this._commentType === CommentType.AllLine ||
-      this._commentType === CommentType.MultiLine
-    ) {
+    if ((
+      commentData.commentType === CommentType.AllLines ||
+      commentData.commentType === CommentType.MultiLines
+    ) && (
+      this._commentType === CommentType.AllLines ||
+      this._commentType === CommentType.MultiLines
+    )) {
       this._blockCommentStart = this._EndRegEx(start);
       this._blockCommentEnd = this._EndRegEx(end);
     }
@@ -77,42 +89,57 @@ export class Parser {
     return text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   }
 
-  public SetRegex (languageId: string)
+  private _GetCharacters (): string[]
   {
-    this._SetChips(languageId);
-
-    if (!this.supportedLanguage) { return; }
-
     const characters: string[] = [];
     this._tags.forEach(({ endTag }) => {
       characters.push(endTag);
     });
 
-    this._regEx = '(' + this._singleLineComment.replace(/\//ig, '\\/') + ')+( |\t)*';
+    return characters;
+  }
+
+  private _Check (
+    match: RegExpExecArray | null,
+    startPos: vscode.Position,
+    endPos: vscode.Position
+  ) {
+    const range = { range: new vscode.Range(startPos, endPos) };
+
+    if (match !== null) {
+      // @ts-ginore
+      const matchTag = this._tags.find(item => item.tag.toLowerCase() === match[3].toLowerCase());
+      if (matchTag) {
+        matchTag.ranges.push(range);
+      }
+    }
+  }
+
+  public SetRegex (languageId: string)
+  {
+    this._SetBreaks(languageId);
+
+    if (!this.supportedLanguage) { return; }
+
+    this._regEx = `(${this._singleLineComment.replace(/\//gi, '\\/')})+( |\t)*`;
 
     this._regEx += '(';
-    this._regEx += characters.join('|');
+    this._regEx += this._GetCharacters().join('|');
     this._regEx += ')+(.*)';
+
+    console.log(`${this._regEx}`);
   }
 
   public FindSingleLineComments (activeEditor: vscode.TextEditor)
   {
     let text = activeEditor.document.getText();
-    let regEx = new RegExp(this._regEx, 'ig');
+    let regEx = new RegExp(this._regEx, 'gi');
 
     let match: RegExpExecArray | null;
     while (match = regEx.exec(text)) {
-      const startPos = activeEditor.document.positionAt(match.index);
+      const startPos = activeEditor.document.positionAt(match.index + match[2].length + this._singleLineComment.length);
       const endPos = activeEditor.document.positionAt(match.index + match[0].length);
-      const range = { range: new vscode.Range(startPos, endPos) };
-
-      if (match !== null) {
-        // @ts-ignore
-        const matchTag = this._tags.find(item => item.tag.toLowerCase() === match[3].toLowerCase());
-        if (matchTag) {
-          matchTag.ranges.push(range);
-        }
-      }
+      this._Check(match, startPos, endPos);
     }
   }
 
@@ -120,13 +147,8 @@ export class Parser {
   {
     let text = activeEditor.document.getText();
 
-    const characters: string[] = [];
-    this._tags.forEach(({ endTag }) => {
-      characters.push(endTag);
-    });
-
     let regExComment = '(^)+([ \\t]*[ \\t]*)(';
-    regExComment += characters.join('|');
+    regExComment += this._GetCharacters().join('|');
     regExComment += ')([ ]*|[:])+([^*/][^\\r\\n]*)';
 
     let regExString = '(^|[ \\t])(';
@@ -136,7 +158,7 @@ export class Parser {
     regExString += ')';
     
     let stringRegEx = new RegExp(regExString, 'gm');
-    let commentRegEx = new RegExp(regExComment, 'igm');
+    let commentRegEx = new RegExp(regExComment, 'gim');
 
     let match: RegExpExecArray | null;
     while (match = stringRegEx.exec(text)) {
@@ -146,29 +168,40 @@ export class Parser {
       while (line = commentRegEx.exec(commentBlock)) {
         const startPos = activeEditor.document.positionAt(match.index);
         const endPos = activeEditor.document.positionAt(match.index + match[0].length);
-        const range = { range: new vscode.Range(startPos, endPos) };
-
-        if (line !== null) {
-          // @ts-ignore
-          const matchTag = this._tags.find(item => item.tag.toLowerCase() === line[3].toLowerCase());
-          if (matchTag) {
-            matchTag.ranges.push(range);
-          }
-        }
+        this._Check(line, startPos, endPos);
       }
     }
   }
 
   public FindJSDocComments (activeEditor: vscode.TextEditor)
   {
-    // TODO Add in JSDoc comments
+    let text = activeEditor.document.getText();
+
+    let regExComment = '(^)+([ \\t]*\\*[ \\t]*)(';
+    regExComment += this._GetCharacters().join('|');
+    regExComment += ')([ ]*|[:])+([^*/][^\\r\\n]*)';
+    
+    let stringRegEx = /(^|[ \t])(\/\*\*)+([\s\S]*?)(\*\/)/gm;
+    let commentRegEx = new RegExp(regExComment, 'gim');
+
+    let match: RegExpExecArray | null;
+    while (match = stringRegEx.exec(text)) {
+      let commentBlock = match[0];
+
+      let line: RegExpExecArray | null;
+      while (line = commentRegEx.exec(commentBlock)) {
+        const startPos = activeEditor.document.positionAt(match.index + line.index + line[2].length);
+        const endPos = activeEditor.document.positionAt(match.index + line.index + line[0].length);
+        this._Check(line, startPos, endPos);
+      }
+    }
   }
 
   public ApplyStyle (activeEditor: vscode.TextEditor)
   {
     this._tags.forEach(tag => {
       activeEditor.setDecorations(tag.style, tag.ranges);
-      tag.ranges = [];
+      tag.ranges.length = 0;
     });
   }
 }

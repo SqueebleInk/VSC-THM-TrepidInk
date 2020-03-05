@@ -41,11 +41,15 @@
                     "description": "Create extra tags to hilight other information or in an other color",
                     "default": [
                         {
-                            "color": "#ff893a",
+                            "style": {
+                                "color": "#ff893a"
+                            },
                             "tag": "todo"
                         },
                         {
-                            "color": "#ff3333",
+                            "style": {
+                                "color": "#ff3333"
+                            },
                             "tag": "fixme"
                         }
                     ],

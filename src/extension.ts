@@ -20,7 +20,7 @@ const InitEventListeners = (context: vscode.ExtensionContext) =>
 		if (editor) {
 			activeEditor = editor;
 
-			parser.SetRegex(editor.document.languageId);
+			parser.SetRegex(activeEditor.document.languageId);
 
 			TriggerUpdateDecorations();
 		}
@@ -49,15 +49,15 @@ const UpdateDecorations = () =>
 
 	const commentSettings = GetConfig().enabled;
 	if (
-		commentSettings === CommentType.AllLine ||
+		commentSettings === CommentType.AllLines ||
 		commentSettings === CommentType.SingleLine
 	) {
 		parser.FindSingleLineComments(activeEditor);
 	}
 
 	if (
-		commentSettings === CommentType.AllLine ||
-		commentSettings === CommentType.MultiLine
+		commentSettings === CommentType.AllLines ||
+		commentSettings === CommentType.MultiLines
 	) {
 		parser.FindBlockComments(activeEditor);
 		parser.FindJSDocComments(activeEditor);
@@ -71,9 +71,9 @@ const activate = (context: vscode.ExtensionContext) =>
 {
 	const commentSettings = GetConfig().enabled;
 	if (
-		commentSettings === CommentType.AllLine ||
+		commentSettings === CommentType.AllLines ||
 		commentSettings === CommentType.SingleLine ||
-		commentSettings === CommentType.MultiLine
+		commentSettings === CommentType.MultiLines
 	) {
 		vscode.window.showInformationMessage('Trepid Ink Comment Higligher Enabled');
 		InitEventListeners(context);
