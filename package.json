@@ -2,7 +2,7 @@
     "name": "trepid-ink",
     "displayName": "Trepid Ink",
     "description": "A color theme, designed to mix well with vscode its interface. Inspired by Trepid",
-    "version": "0.1.1",
+    "version": "0.2.0",
     "license": "GPL-3.0",
     "publisher": "Squeeble",
     "engines": {
@@ -41,16 +41,22 @@
                     "description": "Create extra tags to hilight other information or in an other color",
                     "default": [
                         {
-                            "style": {
-                                "color": "#ff893a"
-                            },
-                            "tag": "todo"
+                          "style": {
+                            "color": "#6bf7f7"
+                          },
+                          "tag": "NOTE"
                         },
                         {
-                            "style": {
-                                "color": "#ff3333"
-                            },
-                            "tag": "fixme"
+                          "style": {
+                            "color": "#ff893a"
+                          },
+                          "tag": "TODO"
+                        },
+                        {
+                          "style": {
+                            "color": "#ff3333"
+                          },
+                          "tag": "FixMe"
                         }
                     ],
                     "type": "array"

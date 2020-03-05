@@ -1,24 +1,51 @@
-#  Trepid Ink
+# Trepid Ink
 
-A color theme for [Visual Studio Code](https://code.visualstudio.com/) designed to mix well with its interface. Integrated with a comment higlight extension for todo's and fix me's. The theme `Trepid Ink` is inspired and cloned from the original [`Trepid`](https://github.com/EnKrypt/Trepid) build by [EnKrypt](https://github.com/EnKrypt/)
+A color theme for [Visual Studio Code](https://code.visualstudio.com/) designed to be more then just a theme. Integrated with a comment higlight extension for todo's and fix me's.  
+The theme `Trepid Ink` is inspired and cloned from the original [`Trepid`](https://github.com/EnKrypt/Trepid) build by [EnKrypt](https://github.com/EnKrypt/)
 
 ## Trepid Ink  
-![Trepid Ink](./images/TrepidInk010.png)  
-![Trepid Ink](./images/TrepidInk010j.png)  
+![Trepid Ink](./assets/TrepidInk010.png)  
+![Trepid Ink](./assets/TrepidInk010j.png)  
 
 ## Features
 
-### TODO Highlighting: 
-*[TODO comment image]*
-
-### FixMe Highlighting:
-*[FixMe comment image]*
+Note that colors are incorrect because of mp4 to gif convertion
+![Trepid Ink Comments](./assets/comments.gif)  
 
 ### Custom comment highlights:
 This extension contributes the following settings:
 
-* `trepid-ink.enable-highlight-comments`: enable/disable this extension
-* `trepid-ink.thing`: set to `blah` to do something
+* trepid-ink.comments:  
+  `All` / `Block` / `Single` / `No`  
+  Sets which comments you want to highlight
+* trepid-ink.tags:  
+  The ["style" can have all vscode theming](https://code.visualstudio.com/api/references/vscode-api#ThemableDecorationRenderOptions):
+  ```json
+  "trepid-ink.tags": [
+    {
+      "style": {
+        "color": "#6bf7f7"
+      },
+      "tag": "NOTE"
+    },
+    {
+      "style": {
+        "color": "#ff893a"
+      },
+      "tag": "TODO"
+    },
+    {
+      "style": {
+        "color": "#ff3333"
+      },
+      "tag": "FixMe"
+    }
+  ]
+  ```
+
+### Supported languages
+- JavaScript
+- TypeScript
 
 ## Roadmap / Updates vs [Trepid](https://github.com/EnKrypt/Trepid)
 [vN.N.N] when fist added in a version or removed
@@ -38,8 +65,9 @@ This extension contributes the following settings:
     - **NOTE**: Low to no change of being added
     - Adding a softer color palette version of the Trepid Ink Brighty
 - Funtions
-  - Comments
+  - [[v0.2.0]](https://github.com/SqueebleInk/VSC-THM-TrepidInk/releases/tag/v0.2.0) Comments
+    - NOTE highlights
     - TODO highlights
     - FixMe highlights
-  - Comments Settings
+  - [[v0.2.0]](https://github.com/SqueebleInk/VSC-THM-TrepidInk/releases/tag/v0.2.0) Comments Settings
     - Custom highlights

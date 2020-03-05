@@ -1,5 +1,47 @@
 # Change Log
 
+## [v0.2.0] - 05/03/2020
+
+### [Updated]
+  - README
+    - Added gif with comment highlighting
+    - Roadmap updated
+    - New asset links
+  - CHANGELOG
+    - New functions with comment highlighting
+    - New asset links
+
+### [Added]
+  - Trepid Ink Comments  
+    ![Trepid Ink Comments](./assets/comments.gif)  
+    - trepid-ink.comments:  
+  `All` / `Block` / `Single` / `No`  
+  Sets which comments you want to highlight
+    - trepid-ink.tags:  
+      The ["style" can have all vscode theming](https://code.visualstudio.com/api/references/vscode-api#ThemableDecorationRenderOptions):
+      ```json
+      "trepid-ink.tags": [
+        {
+          "style": {
+            "color": "#6bf7f7"
+          },
+          "tag": "NOTE"
+        },
+        {
+          "style": {
+            "color": "#ff893a"
+          },
+          "tag": "TODO"
+        },
+        {
+          "style": {
+            "color": "#ff3333"
+          },
+          "tag": "FixMe"
+        }
+      ]
+      ```
+
 ## [v0.1.1] - 01/03/2020
 
 ### [Updated]
@@ -18,16 +60,16 @@
   
 ### [Added]
   - Trepid Ink logo  
-    ![Trepid Ink Logo](./images/logo.png)  
+    ![Trepid Ink Logo](./assets/logo.png)  
 
 ### [Updated]
   - Trepid Ink colors  
     [v0.0.3]  
-    ![Trepid Ink](./images/TrepidInk003.png)  
-    ![Trepid Ink](./images/TrepidInk003j.png)  
+    ![Trepid Ink](./assets/TrepidInk003.png)  
+    ![Trepid Ink](./assets/TrepidInk003j.png)  
     [v0.1.0]  
-    ![Trepid Ink](./images/TrepidInk010.png)  
-    ![Trepid Ink](./images/TrepidInk010j.png)  
+    ![Trepid Ink](./assets/TrepidInk010.png)  
+    ![Trepid Ink](./assets/TrepidInk010j.png)  
 
 ## [v0.0.3] - 24/02/2020
 
@@ -58,14 +100,14 @@
 ### [Updated]
   - Colors for `Trepid Ink`  
   [v0.0.1]
-  ![Trepid Ink](./images/TrepidInk001.png)  
+  ![Trepid Ink](./assets/TrepidInk001.png)  
   [v0.0.2]
-  ![Trepid Ink](./images/TrepidInk002.png) 
+  ![Trepid Ink](./assets/TrepidInk002.png) 
   - Colors for `Trepid Ink Soft`  
   [v0.0.1]
-  ![Trepid Ink Soft](./images/TrepidInkSoft001.png)  
+  ![Trepid Ink Soft](./assets/TrepidInkSoft001.png)  
   [v0.0.2]
-  ![Trepid Ink Soft](./images/TrepidInkSoft002.png)  
+  ![Trepid Ink Soft](./assets/TrepidInkSoft002.png)  
 
 ## [v0.0.1] - 21/02/2020 - Initial release
 
@@ -75,14 +117,14 @@
 ### [Updated]
   - Colors for `Trepid Ink`  
     From:  
-  ![Trepid Bright](./images/TrepidBright.png)  
+  ![Trepid Bright](./assets/TrepidBright.png)  
     To:  
-  ![Trepid Ink](./images/TrepidInk.png)  
+  ![Trepid Ink](./assets/TrepidInk.png)  
   - Colors for `Trepid Ink Soft`  
     From:  
-  ![Trepid](./images/Trepid.png)  
+  ![Trepid](./assets/Trepid.png)  
     To:  
-  ![Trepid Ink Soft](./images/TrepidInkSoft.png)
+  ![Trepid Ink Soft](./assets/TrepidInkSoft.png)
 
 ### [Added]
   - `Trepid Ink` from the old `Trepid Bright`
