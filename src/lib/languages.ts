@@ -1,5 +1,7 @@
-import { CommentType, CommentDefinition } from "./config";
+import { CommentDefinition, CommentType } from './config';
 
+// NOTE: This is to keep the comment configuration together
+// tslint:disable: object-literal-sort-keys
 export const languages: CommentDefinition[] = [
   {
     languageId: [

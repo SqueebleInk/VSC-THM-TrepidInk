@@ -1,5 +1,5 @@
 import * as vscode from 'vscode';
-import { CommentType, GetConfig, TagData, CommentDefinition } from './config';
+import { CommentDefinition, CommentType, GetConfig, TagData } from './config';
 import { languages } from './languages';
 
 export class Parser {
@@ -108,7 +108,9 @@ export class Parser {
 
     if (match !== null) {
       // @ts-ginore
-      const matchTag = this._tags.find(item => item.tag.toLowerCase() === match[3].toLowerCase());
+      const matchTag = this._tags.find(item => {
+        return item.tag.toLowerCase() === match[3].toLowerCase();
+      });
       if (matchTag) {
         matchTag.ranges.push(range);
       }
@@ -137,8 +139,11 @@ export class Parser {
 
     let match: RegExpExecArray | null;
     while (match = regEx.exec(text)) {
-      const startPos = activeEditor.document.positionAt(match.index + match[2].length + this._singleLineComment.length);
-      const endPos = activeEditor.document.positionAt(match.index + match[0].length);
+      const startPosNr = match.index + match[2].length + this._singleLineComment.length;
+      const endPosNr = match.index + match[0].length;
+
+      const startPos = activeEditor.document.positionAt(startPosNr);
+      const endPos = activeEditor.document.positionAt(endPosNr);
       this._Check(match, startPos, endPos);
     }
   }
@@ -152,9 +157,9 @@ export class Parser {
     regExComment += ')([ ]*|[:])+([^*/][^\\r\\n]*)';
 
     let regExString = '(^|[ \\t])(';
-		regExString += this._blockCommentStart;
-		regExString += '[\\s])+([\\s\\S]*?)(';
-		regExString += this._blockCommentEnd;
+    regExString += this._blockCommentStart;
+    regExString += '[\\s])+([\\s\\S]*?)(';
+    regExString += this._blockCommentEnd;
     regExString += ')';
     
     let stringRegEx = new RegExp(regExString, 'gm');
@@ -190,8 +195,11 @@ export class Parser {
 
       let line: RegExpExecArray | null;
       while (line = commentRegEx.exec(commentBlock)) {
-        const startPos = activeEditor.document.positionAt(match.index + line.index + line[2].length);
-        const endPos = activeEditor.document.positionAt(match.index + line.index + line[0].length);
+        const startPosNr = match.index + line.index + line[2].length;
+        const endPosNr = match.index + line.index + line[0].length;
+
+        const startPos = activeEditor.document.positionAt(startPosNr);
+        const endPos = activeEditor.document.positionAt(endPosNr);
         this._Check(line, startPos, endPos);
       }
     }
