@@ -152,18 +152,20 @@ export class Parser {
   {
     let text = activeEditor.document.getText();
 
-    let regExComment = '(^)+([ \\t]*[ \\t]*)(';
+    let regExComment = '(^)+([ \t]*[ \t]*)(';
     regExComment += this._GetCharacters().join('|');
-    regExComment += ')([ ]*|[:])+([^*/][^\\r\\n]*)';
+    regExComment += ')([ ]*|[:])+([^*/][^\r\n]*)';
 
-    let regExString = '(^|[ \\t])(';
+    let regExString = '(^|[ \t])(';
     regExString += this._blockCommentStart;
-    regExString += '[\\s])+([\\s\\S]*?)(';
+    regExString += '[\s])+([\s\S]*?)(';
     regExString += this._blockCommentEnd;
     regExString += ')';
     
     let stringRegEx = new RegExp(regExString, 'gm');
     let commentRegEx = new RegExp(regExComment, 'gim');
+
+    console.log(`${stringRegEx}`);
 
     let match: RegExpExecArray | null;
     while (match = stringRegEx.exec(text)) {
@@ -171,8 +173,11 @@ export class Parser {
 
       let line: RegExpExecArray | null;
       while (line = commentRegEx.exec(commentBlock)) {
-        const startPos = activeEditor.document.positionAt(match.index);
-        const endPos = activeEditor.document.positionAt(match.index + match[0].length);
+        const startPosNr = match.index + this._blockCommentStart.length;
+        const endPosNr = match.index + match[0].length - this._blockCommentEnd.length;
+
+        const startPos = activeEditor.document.positionAt(startPosNr);
+        const endPos = activeEditor.document.positionAt(endPosNr);
         this._Check(line, startPos, endPos);
       }
     }
@@ -182,9 +187,9 @@ export class Parser {
   {
     let text = activeEditor.document.getText();
 
-    let regExComment = '(^)+([ \\t]*\\*[ \\t]*)(';
+    let regExComment = '(^)+([ \t]*\\*[ \t]*)(';
     regExComment += this._GetCharacters().join('|');
-    regExComment += ')([ ]*|[:])+([^*/][^\\r\\n]*)';
+    regExComment += ')([ ]*|[:])+([^*/][^\r\n]*)';
     
     let stringRegEx = /(^|[ \t])(\/\*\*)+([\s\S]*?)(\*\/)/gm;
     let commentRegEx = new RegExp(regExComment, 'gim');
