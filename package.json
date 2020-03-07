@@ -60,6 +60,11 @@
                         }
                     ],
                     "type": "array"
+                },
+                "trepid-ink.delay": {
+                    "description": "Delay it takes to style the comments",
+                    "default": 200,
+                    "type": "number"
                 }
             }
         }
