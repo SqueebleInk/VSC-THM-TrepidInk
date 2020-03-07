@@ -1,6 +1,26 @@
 # Change Log
 
-## [v0.2.0] - 05/03/2020
+## [[v0.2.1] - 07/03/2020](https://github.com/squeeble-ink/vscode.trepid-ink/releases/tag/v0.2.1)
+
+### [Fixed]
+  - [ISSUE #1](https://github.com/squeeble-ink/vscode.trepid-ink/issues/1)
+    - JSDoc coloring contiued on next line
+    - Multi line comments kept first color
+
+### [Updated]
+  - Repo name  
+    From `VSC-THM-TrepidInk` to `vscode.trepid-ink`
+  - README
+    - added new settings info
+    - new links
+  - CHANGELOG
+    - release links to all releases
+    - new version
+
+### [Added]
+  - SETTINGS: `trepid-ink.delay`
+
+## [[v0.2.0] - 05/03/2020](https://github.com/squeeble-ink/vscode.trepid-ink/releases/tag/v0.2.0)
 
 ### [Updated]
   - README
@@ -42,7 +62,7 @@
       ]
       ```
 
-## [v0.1.1] - 01/03/2020
+## [[v0.1.1] - 01/03/2020](https://github.com/squeeble-ink/vscode.trepid-ink/releases/tag/v0.1.1)
 
 ### [Updated]
   - README
@@ -52,7 +72,7 @@
     - Styling for better readability
     - Removed unnecessary text
 
-## [v0.1.0] - 29/02/2020
+## [[v0.1.0] - 29/02/2020](https://github.com/squeeble-ink/vscode.trepid-ink/releases/tag/v0.1.0)
 
 ### [Removed]
   - `Trepid Ink Soft` Because small to no differences  
@@ -71,7 +91,7 @@
     ![Trepid Ink](./assets/TrepidInk010.png)  
     ![Trepid Ink](./assets/TrepidInk010j.png)  
 
-## [v0.0.3] - 24/02/2020
+## [[v0.0.3] - 24/02/2020](https://github.com/squeeble-ink/vscode.trepid-ink/releases/tag/v0.0.3)
 
 ### [Added]
   - Visual updates every version with a new N number vN.N.0
@@ -95,7 +115,7 @@
     - Class name color: `#8ABC26` => `#97D618`
     - Inherited class: `#8ABC26` => `#75A516`
 
-## [v0.0.2] - 24/02/2020
+## [[v0.0.2] - 24/02/2020](https://github.com/squeeble-ink/vscode.trepid-ink/releases/tag/v0.0.2)
 
 ### [Updated]
   - Colors for `Trepid Ink`  
@@ -109,7 +129,7 @@
   [v0.0.2]
   ![Trepid Ink Soft](./assets/TrepidInkSoft002.png)  
 
-## [v0.0.1] - 21/02/2020 - Initial release
+## [[v0.0.1] - 21/02/2020 - Initial release](https://github.com/squeeble-ink/vscode.trepid-ink/releases/tag/v0.0.1)
 
 ### [Fixed]
   - Rename base name `Trepid` => `Trepid Ink`.  
