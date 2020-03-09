@@ -2,7 +2,7 @@
     "name": "trepid-ink",
     "displayName": "Trepid Ink",
     "description": "A color theme, designed to mix well with vscode its interface. Inspired by Trepid",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "license": "GPL-3.0",
     "publisher": "Squeeble",
     "engines": {
@@ -60,16 +60,21 @@
                         }
                     ],
                     "type": "array"
+                },
+                "trepid-ink.delay": {
+                    "description": "Delay it takes to style the comments",
+                    "default": 100,
+                    "type": "number"
                 }
             }
         }
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/SqueebleInk/VSC-THM-TrepidInk.git"
+        "url": "https://github.com/squeeble-ink/vscode.trepid-ink.git"
     },
     "bugs": {
-        "url": "https://github.com/SqueebleInk/VSC-THM-TrepidInk/issues"
+        "url": "https://github.com/squeeble-ink/vscode.trepid-ink/issues"
     },
     "activationEvents": [
         "onLanguage:javascript",

@@ -6,6 +6,7 @@ export type TagConfig = {
 };
 
 export type TrepidInkConfig = {
+  delay: number;
   enabled: string;
   tags: TagConfig[];
 };
@@ -37,6 +38,7 @@ export const GetConfig = (): TrepidInkConfig =>
   const config: vscode.WorkspaceConfiguration = vscode.workspace.getConfiguration('trepid-ink');
 
   return {
+    delay: config.get('delay') as number,
     enabled: config.get('comments') as CommentType,
     tags: config.get('tags') as TagConfig[],
   };

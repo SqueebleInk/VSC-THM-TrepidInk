@@ -123,19 +123,16 @@ export class Parser {
 
     if (!this.supportedLanguage) { return; }
 
-    this._regEx = `(${this._singleLineComment.replace(/\//gi, '\\/')})+( |\t)*`;
+    const comment = this._singleLineComment.replace(/\//gi, '\\/');
+    const matches = this._GetCharacters().join('|');
 
-    this._regEx += '(';
-    this._regEx += this._GetCharacters().join('|');
-    this._regEx += ')+(.*)';
-
-    console.log(`${this._regEx}`);
+    this._regEx = `(${comment})+( |\t)*(${matches})+(.*)`;
   }
 
   public FindSingleLineComments (activeEditor: vscode.TextEditor)
   {
-    let text = activeEditor.document.getText();
-    let regEx = new RegExp(this._regEx, 'gi');
+    const text = activeEditor.document.getText();
+    const regEx = new RegExp(this._regEx, 'gi');
 
     let match: RegExpExecArray | null;
     while (match = regEx.exec(text)) {
@@ -150,29 +147,35 @@ export class Parser {
 
   public FindBlockComments (activeEditor: vscode.TextEditor)
   {
-    let text = activeEditor.document.getText();
+    const text = activeEditor.document.getText();
+    const matches = this._GetCharacters().join('|');
+    const start = this._blockCommentStart;
+    const end = this._blockCommentEnd;
 
-    let regExComment = '(^)+([ \t]*[ \t]*)(';
-    regExComment += this._GetCharacters().join('|');
-    regExComment += ')([ ]*|[:])+([^*/][^\r\n]*)';
-
-    let regExString = '(^|[ \t])(';
-    regExString += this._blockCommentStart;
-    regExString += '[\s])+([\s\S]*?)(';
-    regExString += this._blockCommentEnd;
-    regExString += ')';
+    const regExString = `(^|[ \t])(${start}[\\s])+([\\s\\S]*?)(${end}|\n)`;
+    const regExSingle = `(${start})+([ \t]* \t*)(${matches})([ ]*|[:])+(${end}|[^\r\n]*)`;
+    const regExComment = `(^|${start}\n)+([ \t]*| \t*|)(${matches})([ ]*|[:])+(${end}|[^\r\n]*)`;
     
-    let stringRegEx = new RegExp(regExString, 'gm');
-    let commentRegEx = new RegExp(regExComment, 'gim');
+    const stringRegEx = new RegExp(regExString, 'gm');
+    const singleRegEx = new RegExp(regExSingle, 'gi');
+    const commentRegEx = new RegExp(regExComment, 'gim');
 
-    console.log(`${stringRegEx}`);
+    let multi: RegExpExecArray | null;
+    while (multi = commentRegEx.exec(text)) {
+      const startPosNr = multi.index + start.length;
+      const endPosNr = multi.index + multi[0].length;
+
+      const startPos = activeEditor.document.positionAt(startPosNr);
+      const endPos = activeEditor.document.positionAt(endPosNr);
+      this._Check(multi, startPos, endPos);
+    }
 
     let match: RegExpExecArray | null;
     while (match = stringRegEx.exec(text)) {
-      let commentBlock = match[0];
+      const commentBlock = match[0];
 
       let line: RegExpExecArray | null;
-      while (line = commentRegEx.exec(commentBlock)) {
+      while (line = singleRegEx.exec(commentBlock)) {
         const startPosNr = match.index + this._blockCommentStart.length;
         const endPosNr = match.index + match[0].length - this._blockCommentEnd.length;
 
@@ -185,14 +188,13 @@ export class Parser {
 
   public FindJSDocComments (activeEditor: vscode.TextEditor)
   {
-    let text = activeEditor.document.getText();
+    const text = activeEditor.document.getText();
+    const matches = this._GetCharacters().join('|');
 
-    let regExComment = '(^)+([ \t]*\\*[ \t]*)(';
-    regExComment += this._GetCharacters().join('|');
-    regExComment += ')([ ]*|[:])+([^*/][^\r\n]*)';
+    const regExComment = `(^)+([ \t]*\\* \t*)(${matches})([ ]*|[:])+([^*/]|[^\r\n]*)`;
     
-    let stringRegEx = /(^|[ \t])(\/\*\*)+([\s\S]*?)(\*\/)/gm;
-    let commentRegEx = new RegExp(regExComment, 'gim');
+    const stringRegEx = /(^|)+(\/\*\*)+([\s\S]*?)(\*\/)/gm;
+    const commentRegEx = new RegExp(regExComment, 'gim');
 
     let match: RegExpExecArray | null;
     while (match = stringRegEx.exec(text)) {

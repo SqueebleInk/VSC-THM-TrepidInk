@@ -5,6 +5,7 @@ import { Parser } from './lib/parser';
 let activeEditor: vscode.TextEditor;
 let parser: Parser = new Parser();
 let timeOut: NodeJS.Timeout;
+let time: number = GetConfig().delay;
 
 const InitEventListeners = (context: vscode.ExtensionContext) =>
 {
@@ -39,7 +40,7 @@ const TriggerUpdateDecorations = () =>
     clearTimeout(timeOut);
   }
 
-  timeOut = setTimeout(UpdateDecorations, 100);
+  timeOut = setTimeout(UpdateDecorations, time);
 };
 
 const UpdateDecorations = () =>

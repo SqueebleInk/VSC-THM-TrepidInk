@@ -15,10 +15,13 @@ Note that colors are incorrect because of mp4 to gif convertion
 ### Custom comment highlights:
 This extension contributes the following settings:
 
-* trepid-ink.comments:  
+- trepid-ink.delay:  
+  Delay it takes to style the comments  
+  **NOTE:** Do not set it on 0!
+- trepid-ink.comments:  
   `All` / `Block` / `Single` / `No`  
   Sets which comments you want to highlight
-* trepid-ink.tags:  
+- trepid-ink.tags:  
   The ["style" can have all vscode theming](https://code.visualstudio.com/api/references/vscode-api#ThemableDecorationRenderOptions):
   ```json
   "trepid-ink.tags": [
@@ -51,10 +54,10 @@ This extension contributes the following settings:
 [vN.N.N] when fist added in a version or removed
 
 - Themes
-  - [[v0.0.1]](https://github.com/SqueebleInk/VSC-THM-TrepidInk/blob/master/CHANGELOG.md#v001---21022020---initial-release) Trepid Ink
+  - [[v0.0.1]](https://github.com/squeeble-ink/vscode.trepid-ink/blob/master/CHANGELOG.md#v001---21022020---initial-release) Trepid Ink
     - Updating: New render engine
     - Renaming: Trepid Bright => Trepid Ink
-  - [[v0.0.1]](https://github.com/SqueebleInk/VSC-THM-TrepidInk/blob/master/CHANGELOG.md#v001---21022020---initial-release) Trepid Ink Soft
+  - [[v0.0.1]](https://github.com/squeeble-ink/vscode.trepid-ink/blob/master/CHANGELOG.md#v001---21022020---initial-release) Trepid Ink Soft
     - **REMOVED** in [[v0.1.0]](https://github.com/SqueebleInk/VSC-THM-TrepidInk/releases/tag/v0.1.0)  
       Because small to no differences. May be added back in a later version
     - Updating: New render engine
@@ -65,9 +68,9 @@ This extension contributes the following settings:
     - **NOTE**: Low to no change of being added
     - Adding a softer color palette version of the Trepid Ink Brighty
 - Funtions
-  - [[v0.2.0]](https://github.com/SqueebleInk/VSC-THM-TrepidInk/releases/tag/v0.2.0) Comments
+  - [[v0.2.0]](https://github.com/squeeble-ink/vscode.trepid-ink/releases/tag/v0.2.0) Comments
     - NOTE highlights
     - TODO highlights
     - FixMe highlights
-  - [[v0.2.0]](https://github.com/SqueebleInk/VSC-THM-TrepidInk/releases/tag/v0.2.0) Comments Settings
+  - [[v0.2.0]](https://github.com/squeeble-ink/vscode.trepid-ink/releases/tag/v0.2.0) Comments Settings
     - Custom highlights
