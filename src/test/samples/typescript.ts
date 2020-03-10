@@ -2,6 +2,7 @@ class Test
 {
   /**
    * TODO: Let it do stuff
+   * NOTE: How this works
    */
   public constructor ()
   {
