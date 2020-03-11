@@ -12,5 +12,14 @@ export const languages: CommentDefinition[] = [
     blockCommentStart: '/*',
     blockCommentEnd: '*/',
     commentType: CommentType.AllLines
-  }
+  },
+  {
+    languageId: [
+      'css',
+    ],
+    singleLineComment: '',
+    blockCommentStart: '/*',
+    blockCommentEnd: '*/',
+    commentType: CommentType.MultiLines
+  },
 ];

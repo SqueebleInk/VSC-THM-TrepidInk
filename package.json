@@ -79,7 +79,8 @@
     },
     "activationEvents": [
         "onLanguage:javascript",
-        "onLanguage:typescript"
+        "onLanguage:typescript",
+        "onLanguage:css"
     ],
     "main": "out/extension.js",
     "icon": "assets/logo.png",
