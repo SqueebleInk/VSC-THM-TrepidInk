@@ -154,30 +154,37 @@ export class Parser {
 
     const regExString = `(^|[ \t])(${start}[\\s])+([\\s\\S]*?)(${end}|\n)`;
     const regExSingle = `(${start})+([ \t]* \t*)(${matches})([ ]*|[:])+(${end}|[^\r\n]*)`;
-    const regExComment = `(^|${start}\n)+([ \t]*| \t*|)(${matches})([ ]*|[:])+(${end}|[^\r\n]*)`;
+    const regExComment = `(^|)+(${start})+([\\s\\S]*?)(${end})`;
+    const RegExMulti = `(^)+([ \t]*| \t*|)(${matches})([ ]*|[:])+([^\r\n]*)`;
     
     const stringRegEx = new RegExp(regExString, 'gm');
     const singleRegEx = new RegExp(regExSingle, 'gi');
-    const commentRegEx = new RegExp(regExComment, 'gim');
+    const commentRegEx = new RegExp(regExComment, 'gm');
+    const multiRegEx = new RegExp(RegExMulti, 'gim');
 
     let multi: RegExpExecArray | null;
     while (multi = commentRegEx.exec(text)) {
-      const startPosNr = multi.index + start.length;
-      const endPosNr = multi.index + multi[0].length;
+      let commentBlock = multi[0];
 
-      const startPos = activeEditor.document.positionAt(startPosNr);
-      const endPos = activeEditor.document.positionAt(endPosNr);
-      this._Check(multi, startPos, endPos);
+      let line: RegExpExecArray | null;
+      while (line = multiRegEx.exec(commentBlock)) {
+        const startPosNr = multi.index + line.index + line[2].length;
+        const endPosNr = multi.index + line.index + line[0].length;
+
+        const startPos = activeEditor.document.positionAt(startPosNr);
+        const endPos = activeEditor.document.positionAt(endPosNr);
+        this._Check(line, startPos, endPos);
+      }
     }
 
-    let match: RegExpExecArray | null;
-    while (match = stringRegEx.exec(text)) {
-      const commentBlock = match[0];
+    let single: RegExpExecArray | null;
+    while (single = stringRegEx.exec(text)) {
+      const commentBlock = single[0];
 
       let line: RegExpExecArray | null;
       while (line = singleRegEx.exec(commentBlock)) {
-        const startPosNr = match.index + this._blockCommentStart.length;
-        const endPosNr = match.index + match[0].length - this._blockCommentEnd.length;
+        const startPosNr = single.index + this._blockCommentStart.length;
+        const endPosNr = single.index + single[0].length - this._blockCommentEnd.length;
 
         const startPos = activeEditor.document.positionAt(startPosNr);
         const endPos = activeEditor.document.positionAt(endPosNr);
