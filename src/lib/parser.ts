@@ -191,7 +191,7 @@ export class Parser {
     const text = activeEditor.document.getText();
     const matches = this._GetCharacters().join('|');
 
-    const regExComment = `(^)+([ \t]*\\* \t*)(${matches})([ ]*|[:])+([^*/]|[^\r\n]*)`;
+    const regExComment = `(^)+([ \t]*\\* \t*)(${matches})([ ]*|[:])+([^\r\n]*)`;
     
     const stringRegEx = /(^|)+(\/\*\*)+([\s\S]*?)(\*\/)/gm;
     const commentRegEx = new RegExp(regExComment, 'gim');
