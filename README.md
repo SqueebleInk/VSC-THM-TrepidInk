@@ -49,6 +49,7 @@ This extension contributes the following settings:
 ### Supported languages
 - JavaScript
 - TypeScript
+- CSS
 
 ## Roadmap / Updates vs [Trepid](https://github.com/EnKrypt/Trepid)
 [vN.N.N] when fist added in a version or removed

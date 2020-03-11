@@ -1,5 +1,22 @@
 # Change Log
 
+## [[v0.2.2] - 07/03/2020](https://github.com/squeeble-ink/vscode.trepid-ink/releases/tag/v0.2.2)
+
+### [Fixed]
+  - [ISSUE #2](https://github.com/squeeble-ink/vscode.trepid-ink/issues/2)
+    - Multi line comments did not color first caracters
+    - JSDoc coloring broke before it needed to end
+
+### [Updated]
+  - README
+    - language support
+  - CHANGELOG
+    - new version
+
+### [Added]
+  - Language Comment Support
+    - CSS
+
 ## [[v0.2.1] - 07/03/2020](https://github.com/squeeble-ink/vscode.trepid-ink/releases/tag/v0.2.1)
 
 ### [Fixed]
