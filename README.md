@@ -50,6 +50,7 @@ This extension contributes the following settings:
 - JavaScript
 - TypeScript
 - CSS
+- C++
 
 ## Roadmap / Updates vs [Trepid](https://github.com/EnKrypt/Trepid)
 [vN.N.N] when fist added in a version or removed

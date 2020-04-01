@@ -1,5 +1,11 @@
 # Change Log
 
+## [[v0.2.3] - 01/04/2020](https://github.com/squeeble-ink/vscode.trepid-ink/releases/tag/v0.2.3)
+
+### [Added]
+  - Language Comment Support
+    - C++
+
 ## [[v0.2.2] - 11/03/2020](https://github.com/squeeble-ink/vscode.trepid-ink/releases/tag/v0.2.2)
 
 ### [Fixed]
