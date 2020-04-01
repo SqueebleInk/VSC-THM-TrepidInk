@@ -7,6 +7,7 @@ export const languages: CommentDefinition[] = [
     languageId: [
       'javascript',
       'typescript',
+      'cpp',
     ],
     singleLineComment: '//',
     blockCommentStart: '/*',
