@@ -3,16 +3,18 @@
 A color theme for [Visual Studio Code](https://code.visualstudio.com/) designed to be more then just a theme. Integrated with a comment higlight extension for todo's and fix me's.  
 The theme `Trepid Ink` is inspired and cloned from the original [`Trepid`](https://github.com/EnKrypt/Trepid) build by [EnKrypt](https://github.com/EnKrypt/)
 
-## Trepid Ink  
+## Trepid Ink
+
 ![Trepid Ink](./assets/TrepidInk010.png)  
-![Trepid Ink](./assets/TrepidInk010j.png)  
+![Trepid Ink](./assets/TrepidInk010j.png)
 
 ## Features
 
 Note that colors are incorrect because of mp4 to gif convertion
-![Trepid Ink Comments](./assets/comments.gif)  
+![Trepid Ink Comments](./assets/comments.gif)
 
 ### Custom comment highlights:
+
 This extension contributes the following settings:
 
 - trepid-ink.delay:  
@@ -47,12 +49,14 @@ This extension contributes the following settings:
   ```
 
 ### Supported languages
+
 - JavaScript
 - TypeScript
 - CSS
 - C++
 
 ## Roadmap / Updates vs [Trepid](https://github.com/EnKrypt/Trepid)
+
 [vN.N.N] when fist added in a version or removed
 
 - Themes
@@ -65,7 +69,7 @@ This extension contributes the following settings:
     - Updating: New render engine
     - Renaming: Trepid => Trepid Ink Soft
   - Trepid Ink Bright
-    - Adding light edition for the light coders 
+    - Adding light edition for the light coders
   - Trepid Ink Light
     - **NOTE**: Low to no change of being added
     - Adding a softer color palette version of the Trepid Ink Brighty
