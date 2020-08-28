@@ -1,6 +1,6 @@
 # Change Log
 
-## [[v0.2.5] - 29/08/2020 ](https://github.com/squeeble-ink/vscode.trepid-ink/releases/tag/v0.2.4)
+## [[v0.2.5] - 29/08/2020 ](https://github.com/squeeble-ink/vscode.trepid-ink/releases/tag/v0.2.5)
 
 ### [Security]
 
