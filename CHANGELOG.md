@@ -1,28 +1,15 @@
 # Change Log
 
-## [[v0.2.5] - 29/08/2020 ](https://github.com/squeeble-ink/vscode.trepid-ink/releases/tag/v0.2.5)
+## [[v0.2.4] - 05/08/2020](https://github.com/squeeble-ink/vscode.trepid-ink/releases/tag/v0.2.4)
 
 ### [Security]
 
 - Lodash from 4.17.15 to 4.17.19
 
-### [Fixed]
-
-- Language Comment Support
-  - C++ INI
-  - JSX
-  - TSX
-
-### [Updated]
-
-- Code styling
-
-## [[v0.2.4] - 05/08/2020](https://github.com/squeeble-ink/vscode.trepid-ink/releases/tag/v0.2.4)
-
 ### [Added]
 
 - Language Comment Support
-  - C++ INI
+  - INO
   - JSX
   - TSX
 

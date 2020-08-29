@@ -3,6 +3,21 @@
 A color theme for [Visual Studio Code](https://code.visualstudio.com/) designed to be more then just a theme. Integrated with a comment higlight extension for todo's and fix me's.  
 The theme `Trepid Ink` is inspired and cloned from the original [`Trepid`](https://github.com/EnKrypt/Trepid) build by [EnKrypt](https://github.com/EnKrypt/)
 
+## IMPORTANT NOTE
+
+> The idea was that this is a theme that does more.
+> However with some people only wanting the theme
+> I am going to stop updating this theme extention.
+>
+> This does not mean that the comment highlighter or theme will discontinue.  
+> I will be moving the comment higlighter to a new extention.  
+> As well the theme will move to a new theme pack.
+>
+> - [`deco-it`](https://github.com/squeeble-ink/vscode.deco-it) the new theme  
+>    Extension identifier: `squeeble.deco-it`
+> - [`mint-it`](https://github.com/squeeble-ink/vscode.mint-it) the new comment highlighting  
+>    Extension identifier: `squeeble.mint-it`
+
 ## Trepid Ink
 
 ![Trepid Ink](./assets/TrepidInk010.png)  
