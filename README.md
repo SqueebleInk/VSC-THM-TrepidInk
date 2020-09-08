@@ -1,9 +1,18 @@
-# Trepid Ink
+<p>
+  <h1 align="center">Trepid Ink (Deprecated)</h1>
+</p>
+<p align="center">
+  <a href="https://marketplace.visualstudio.com/items?itemName=squeeble.trepid-ink">
+    <img src="https://vsmarketplacebadge.apphb.com/version-short/squeeble.trepid-ink.svg?label=%20&style=flat-square&color=35495e">
+    <img src="https://vsmarketplacebadge.apphb.com/installs-short/squeeble.trepid-ink.svg?label=%20&style=flat-square&color=35495e">
+    <img src="https://img.shields.io/badge/trepid--ink-Depreciated-FF3333?label=%20&style=flat-square">
+  </a>
+</p>
 
 A color theme for [Visual Studio Code](https://code.visualstudio.com/) designed to be more then just a theme. Integrated with a comment higlight extension for todo's and fix me's.  
 The theme `Trepid Ink` is inspired and cloned from the original [`Trepid`](https://github.com/EnKrypt/Trepid) build by [EnKrypt](https://github.com/EnKrypt/)
 
-## IMPORTANT NOTE
+## **IMPORTANT NOTE**
 
 > The idea was that this is a theme that does more.
 > However with some people only wanting the theme
@@ -13,9 +22,9 @@ The theme `Trepid Ink` is inspired and cloned from the original [`Trepid`](https
 > I will be moving the comment higlighter to a new extention.  
 > As well the theme will move to a new theme pack.
 >
-> - [`deco-it`](https://github.com/squeeble-ink/vscode.deco-it) the new theme  
+> - [`deco-it`](https://marketplace.visualstudio.com/items?itemName=squeeble.deco-it) the new theme  
 >    Extension identifier: `squeeble.deco-it`
-> - [`mint-it`](https://github.com/squeeble-ink/vscode.mint-it) the new comment highlighting  
+> - [`mint-it`](https://marketplace.visualstudio.com/items?itemName=squeeble.mint-it) the new comment highlighting  
 >    Extension identifier: `squeeble.mint-it`
 
 ## Trepid Ink

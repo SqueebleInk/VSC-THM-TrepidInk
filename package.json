@@ -20,7 +20,13 @@
     "highlight",
     "highlighter",
     "comment higlighter",
-    "comments higlighter"
+    "comments higlighter",
+    "trepid",
+    "deco-it",
+    "deco it",
+    "decorate",
+    "decorate it",
+    "decorate-it"
   ],
   "contributes": {
     "themes": [

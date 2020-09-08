@@ -1,5 +1,21 @@
 # Change Log
 
+## [[v0.2.5] - 08/09/2020](https://github.com/squeeble-ink/vscode.trepid-ink/releases/tag/v0.2.5)
+
+### NOTE: Last official publication
+
+### [Updated]
+
+- README  
+  Tite from **"Trepid Ink"** to **"Trepid Ink (Deprecated)"**  
+  Added subbadges with Depreciated
+- Trepid Ink logo  
+  <img src="./assets/logo.png" width="200">
+
+### [Removed]
+
+- Funding
+
 ## [[v0.2.4] - 05/08/2020](https://github.com/squeeble-ink/vscode.trepid-ink/releases/tag/v0.2.4)
 
 ### [Security]
@@ -132,7 +148,7 @@
 ### [Added]
 
 - Trepid Ink logo  
-  ![Trepid Ink Logo](./assets/logo.png)
+  <img src="./assets/logo-010.png" width="200">
 
 ### [Updated]
 
