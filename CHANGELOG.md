@@ -1,5 +1,12 @@
 # Change Log
 
+## [[v0.2.6] - 08/09/2020](https://github.com/squeeble-ink/vscode.trepid-ink/releases/tag/v0.2.6)
+
+### [Fixed]
+
+- Depreciated typo to Deprecated in badge and logo  
+  <img src="./assets/logo.png" width="200">
+
 ## [[v0.2.5] - 08/09/2020](https://github.com/squeeble-ink/vscode.trepid-ink/releases/tag/v0.2.5)
 
 ### NOTE: Last official publication
@@ -10,7 +17,7 @@
   Tite from **"Trepid Ink"** to **"Trepid Ink (Deprecated)"**  
   Added subbadges with Depreciated
 - Trepid Ink logo  
-  <img src="./assets/logo.png" width="200">
+  <img src="./assets/logo-025.png" width="200">
 
 ### [Removed]
 

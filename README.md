@@ -5,7 +5,7 @@
   <a href="https://marketplace.visualstudio.com/items?itemName=squeeble.trepid-ink">
     <img src="https://vsmarketplacebadge.apphb.com/version-short/squeeble.trepid-ink.svg?label=%20&style=flat-square&color=35495e">
     <img src="https://vsmarketplacebadge.apphb.com/installs-short/squeeble.trepid-ink.svg?label=%20&style=flat-square&color=35495e">
-    <img src="https://img.shields.io/badge/trepid--ink-Depreciated-FF3333?label=%20&style=flat-square">
+    <img src="https://img.shields.io/badge/trepid--ink-Deprecated-FF3333?label=%20&style=flat-square">
   </a>
 </p>
 
